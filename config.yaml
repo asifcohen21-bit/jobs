@@ -1,0 +1,292 @@
+# ============================================================
+#  Student Job Agent — configuration
+#  Everything here is editable without touching the code.
+# ============================================================
+
+search_queries:
+  hebrew:
+    - סטודנט דאטה
+    - סטודנט אנליסט
+    - סטודנט ניתוח נתונים
+    - סטודנט BI
+    - סטודנט בינה עסקית
+    - סטודנט PMO
+    - סטודנט ניהול פרויקטים
+    - סטודנט בקרת פרויקטים
+    - מתאם פרויקטים סטודנט
+    - סטודנט QA
+    - סטודנט אוטומציה
+    - סטודנט בדיקות תוכנה
+    - סטודנט תעשייה וניהול
+    - סטודנט הנדסת תעשייה
+    - סטודנט תפעול
+    - סטודנט שרשרת אספקה
+    - סטודנט תכנון ובקרה
+    - סטודנט לוגיסטיקה
+    - סטודנט מוצר
+  english:
+    - Student Data Analyst
+    - Data Analyst Student
+    - BI Student
+    - Business Intelligence Student
+    - Business Analyst Student
+    - Data Science Student
+    - PMO Student
+    - Project Management Student
+    - Project Coordinator Student
+    - Student Project Manager
+    - QA Student
+    - QA Automation Student
+    - Automation Student
+    - Industrial Engineering Student
+    - Student Industrial Engineer
+    - Operations Student
+    - Supply Chain Student
+    - PPC Student
+    - Production Planner Student
+    - Process Engineer Student
+    - Operations Planner Student
+    - Product Student
+    - Product Manager Student
+    - Product Analyst Student
+  # Drushim's search API only returns results for SINGLE-WORD queries
+  # (verified live) — broad words on purpose; our own filters do the narrowing
+  drushim:
+    - סטודנט
+    - אנליסט
+    - דאטה
+    - BI
+    - PMO
+    - אוטומציה
+    - QA
+    - תפעול
+    - לוגיסטיקה
+    - מוצר
+  # compact list for the budget-limited JSearch API (Indeed/Glassdoor coverage)
+  jsearch:
+    - student data analyst
+    - student industrial engineering
+    - student BI business intelligence
+    - student project PMO
+    - student QA automation
+    - student supply chain operations
+
+# A job must contain at least one of these words in its TITLE (any mode)
+role_words:
+  - אנליסט
+  - דאטה
+  - נתונים
+  - BI
+  - בינה עסקית
+  - פרויקט
+  - פרוייקט
+  - PMO
+  - QA
+  - אוטומציה
+  - בדיקות
+  - תעשייה וניהול
+  - תעשיה וניהול
+  - הנדסת תעשייה
+  - הנדסת תעשיה
+  - תפעול
+  - שרשרת אספקה
+  - לוגיסטיקה
+  - תכנון ובקרה
+  - מוצר
+  - analyst
+  - analytics
+  - data
+  - business intelligence
+  - project
+  - PMO
+  - QA
+  - automation
+  - test
+  - industrial engineering
+  - operations
+  - supply chain
+  - PPC
+  - planner
+  - planning
+  - process engineer
+  - product
+
+# In "student" mode a job passes if a student word appears in title/description
+# OR a part-time word appears in title/description/scope
+student_words:
+  - סטודנט
+  - סטודנטית
+  - סטודנטים
+  - סטודנטיות
+  - student
+  - students
+parttime_words:
+  - משרה חלקית
+  - חלקית
+  - חצי משרה
+  - היקף חלקי
+  - part time
+  - part-time
+  - parttime
+
+# Jobs whose TITLE contains any of these are rejected
+exclude_words:
+  - מכירות
+  - טלמרקטינג
+  - טלמיטינג
+  - נהג
+  - מלצר
+  - מלצרות
+  - אבטחה
+  - מאבטח
+  - קופה
+  - קופאי
+  - שליח
+  - שליחויות
+  - sales representative
+  - driver
+  - waiter
+  - cashier
+
+# Jobs from these companies are always skipped (exact-word match on the
+# company name). Useful against advertisers that flood the boards.
+# Example: uncomment the next line to silence Experis Academy course ads.
+exclude_companies: []
+#  - Experis Academy
+
+# Locations — Hebrew AND English variants. Matching is case-insensitive,
+# apostrophes are stripped and hyphens become spaces before comparing.
+locations:
+  south:
+    - באר שבע
+    - Beer Sheva
+    - Be'er Sheva
+    - Beersheba
+    - Beer-Sheva
+    - אשדוד
+    - Ashdod
+    - אשקלון
+    - Ashkelon
+    - קריית גת
+    - קרית גת
+    - Kiryat Gat
+    - קריית מלאכי
+    - קרית מלאכי
+    - Kiryat Malakhi
+    - שדרות
+    - Sderot
+    - נתיבות
+    - Netivot
+    - אופקים
+    - Ofakim
+    - דימונה
+    - Dimona
+    - ערד
+    - Arad
+    - ירוחם
+    - Yeruham
+    - עומר
+    - Omer
+    - להבים
+    - Lehavim
+    - מיתר
+    - Meitar
+    - רהט
+    - Rahat
+    - גדרה
+    - Gedera
+  center:
+    - תל אביב
+    - Tel Aviv
+    - רמת גן
+    - Ramat Gan
+    - גבעתיים
+    - Givatayim
+    - בני ברק
+    - Bnei Brak
+    - חולון
+    - Holon
+    - בת ים
+    - Bat Yam
+    - ראשון לציון
+    - Rishon LeZion
+    - Rishon LeTsiyon
+    - Rishon Lezion
+    - רחובות
+    - Rehovot
+    - נס ציונה
+    - Ness Ziona
+    - Nes Ziona
+    - פתח תקווה
+    - פתח תקוה
+    - Petah Tikva
+    - Petach Tikva
+    - ראש העין
+    - Rosh HaAyin
+    - Rosh Haayin
+    - לוד
+    - Lod
+    - רמלה
+    - Ramla
+    - Ramle
+    - מודיעין
+    - Modiin
+    - Modi'in
+    - יבנה
+    - Yavne
+    - אור יהודה
+    - Or Yehuda
+    - קריית אונו
+    - קרית אונו
+    - Kiryat Ono
+    - שוהם
+    - Shoham
+    - איירפורט סיטי
+    - Airport City
+    - הרצליה
+    - Herzliya
+    - רעננה
+    - Ra'anana
+    - Raanana
+    - כפר סבא
+    - Kfar Saba
+    - הוד השרון
+    - Hod HaSharon
+    - Hod Hasharon
+  region_words:
+    - דרום
+    - South
+    - Southern
+    - נגב
+    - Negev
+    - מרכז
+    - Center
+    - Central
+    - גוש דן
+    - Gush Dan
+    - השפלה
+    - שפלה
+    - Shfela
+
+remote_words:
+  - עבודה מהבית
+  - היברידי
+  - היברידית
+  - מהבית
+  - עבודה מרחוק
+  - remote
+  - hybrid
+  - work from home
+
+limits:
+  max_messages_per_run: 25      # normal cap of Telegram alerts per run
+  seed_max_messages: 10         # cap on the very first run (empty database)
+  drushim_pages_per_query: 2    # JSON API pages fetched per query
+  linkedin_queries_per_run: 10  # rotated between runs so all queries cycle
+  alljobs_queries_per_run: 5
+  besteffort_queries_per_run: 4 # Indeed/Glassdoor direct attempts
+  jsearch_monthly_budget: 180   # free tier = ~200 req/month, keep headroom
+  jsearch_queries_per_slot: 2   # requests per active slot
+  jsearch_slot_hours_utc: [5, 10, 15]  # 3 slots/day -> ~6 requests/day
+  request_delay_seconds: 1.0    # politeness delay between HTTP requests
+  seen_retention_days: 60       # prune dedup entries older than this
