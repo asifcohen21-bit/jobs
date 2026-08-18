@@ -49,13 +49,14 @@ python main.py             # real run — first run sends the 10 newest matches
 
 That's it — it now runs every 30 minutes, forever, for free.
 
-### 4. Optional: Indeed + Glassdoor coverage
-Indeed and Glassdoor block direct scraping, so their listings come through the
-**JSearch** API (aggregates Google for Jobs):
-1. Sign up free at [rapidapi.com](https://rapidapi.com) → subscribe to the
-   **JSearch** API (Basic / free plan).
-2. Add your key as the `RAPIDAPI_KEY` secret.
-The agent budgets itself (~6 requests/day) so it never exceeds the free quota.
+### 4. Optional: JSearch (limited value for Israel)
+Indeed and Glassdoor block direct scraping. The **JSearch** API (RapidAPI,
+free Basic plan, secret `RAPIDAPI_KEY`) was wired in as an aggregator, but
+**Google for Jobs — its data source — has no Israel index**, so it returns
+zero local Israeli positions (verified live). Leaving the secret unset is
+fine: Drushim + LinkedIn + AllJobs cover the Israeli market, and Indeed's
+Israeli listings are mostly cross-posts of the same inventory. The agent
+budgets JSearch to ~6 requests/day if you do enable it.
 
 ## Telegram commands
 

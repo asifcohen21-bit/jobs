@@ -1,6 +1,11 @@
 """JSearch (RapidAPI free tier) — aggregates Google for Jobs, which carries
 Indeed and Glassdoor postings. Strictly budget-guarded so it never exceeds
-the free monthly quota. Skipped entirely when RAPIDAPI_KEY is not set."""
+the free monthly quota. Skipped entirely when RAPIDAPI_KEY is not set.
+
+IMPORTANT LIMITATION (verified live 2026-08-18): Google for Jobs has no
+Israel index, so country=il returns zero results for local positions. This
+source only contributes remote/abroad roles; Israeli coverage comes from
+Drushim, LinkedIn and AllJobs."""
 from __future__ import annotations
 
 import datetime as dt
@@ -13,7 +18,7 @@ from .base import Job, USER_AGENT, rotate
 
 log = logging.getLogger("agent")
 
-API = "https://jsearch.p.rapidapi.com/search"
+API = "https://jsearch.p.rapidapi.com/search-v2"
 SOURCE = "jsearch"
 
 
@@ -74,7 +79,9 @@ def fetch(queries: list[str], cfg: dict, state: dict) -> list[Job]:
             if resp.status_code != 200:
                 log.info("jsearch: HTTP %s for %r", resp.status_code, q)
                 continue
-            for item in resp.json().get("data") or []:
+            data = resp.json().get("data") or {}
+            items = data.get("jobs", []) if isinstance(data, dict) else data
+            for item in items:
                 job = _parse(item)
                 if job:
                     jobs.append(job)

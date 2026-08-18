@@ -1,1 +1,32 @@
-{}
+{
+ "jsearch": {
+  "last_slot": "2026-08-18:15",
+  "month": "2026-08",
+  "qidx": 2,
+  "used": 2
+ },
+ "last_run": {
+  "at": "2026-08-18 18:31 UTC",
+  "mode": "student",
+  "new": 21,
+  "passed": 21,
+  "scanned": 316,
+  "sent": 10,
+  "sources": {
+   "alljobs": 135,
+   "drushim": 200,
+   "glassdoor": 0,
+   "indeed": 10,
+   "jsearch": 0,
+   "linkedin": 96
+  }
+ },
+ "mode": "student",
+ "rot": {
+  "alljobs": 5,
+  "glassdoor": 4,
+  "indeed": 4,
+  "linkedin": 10
+ },
+ "tg_offset": 542528361
+}
