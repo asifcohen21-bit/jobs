@@ -6,27 +6,27 @@
   "used": 2
  },
  "last_run": {
-  "at": "2026-09-07 09:16 UTC",
+  "at": "2026-09-07 09:44 UTC",
   "mode": "student",
   "new": 0,
-  "passed": 13,
-  "scanned": 142,
+  "passed": 12,
+  "scanned": 156,
   "sent": 0,
   "sources": {
-   "alljobs": 127,
+   "alljobs": 125,
    "drushim": 0,
    "glassdoor": 0,
    "indeed": 0,
    "jsearch": 0,
-   "linkedin": 100
+   "linkedin": 99
   }
  },
  "mode": "student",
  "rot": {
-  "alljobs": 2820,
-  "glassdoor": 2256,
-  "indeed": 2256,
-  "linkedin": 5640
+  "alljobs": 2825,
+  "glassdoor": 2260,
+  "indeed": 2260,
+  "linkedin": 5650
  },
  "tg_offset": 542528365
 }
