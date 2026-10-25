@@ -12,6 +12,7 @@
  "alljobs:8733548": "2026-10-22",
  "alljobs:8780737": "2026-10-18",
  "alljobs:8781935": "2026-10-18",
+ "alljobs:8795592": "2026-10-25",
  "alljobs:8800034": "2026-08-28",
  "alljobs:8802155": "2026-08-30",
  "alljobs:8802977": "2026-08-31",
@@ -67,7 +68,9 @@
  "alljobs:8866494": "2026-10-21",
  "alljobs:8868951": "2026-10-22",
  "alljobs:8869859": "2026-10-23",
+ "alljobs:8870237": "2026-10-25",
  "content:007e386cbd9e5c3833adf1de8f708cb0db240d91": "2026-08-29",
+ "content:04d3227b010bcf07e2dd8039f0259f886edba600": "2026-10-25",
  "content:08ab5dde1b2fb6af3dbcab93e89a33cfcfd88489": "2026-10-23",
  "content:0aa5af6918375758cdcef5b91c8f7fd32d3af4d7": "2026-10-18",
  "content:0dfd2ef6b27cbb271d4c7b0c5028eb58f531c556": "2026-09-20",
@@ -107,7 +110,9 @@
  "content:514baa3f78702a9156f5b5cd00fa4e3ec66551a2": "2026-09-06",
  "content:54995fbf628b0cbe34e6adc89d68010a1d929cd7": "2026-10-18",
  "content:54f247f4f4f05335e0967e6be8df076769b27bc3": "2026-10-01",
+ "content:572c64ee2eaf15f9802b01998ba0867f3c50ad21": "2026-10-25",
  "content:5802b3980cda80548edab7d3de3b75a992b5aec8": "2026-08-26",
+ "content:58b1e4620f8ea4da4c2f79a9ac9e6b1e562deddd": "2026-10-25",
  "content:59a675d93c7ae2a8f7094be2e2d2385d36a821f4": "2026-10-23",
  "content:5daacb37e8e55f44d53ddd6011c2a4a1eadca2bb": "2026-08-28",
  "content:5ebbd39dd6b2938f984b7cef6deedb4a2c50aaa0": "2026-08-31",
@@ -204,5 +209,6 @@
  "linkedin:4480905059": "2026-10-18",
  "linkedin:4481572968": "2026-10-20",
  "linkedin:4481574278": "2026-10-20",
- "linkedin:4482116777": "2026-10-21"
+ "linkedin:4482116777": "2026-10-21",
+ "linkedin:4482671753": "2026-10-25"
 }
